@@ -10,3 +10,5 @@ jobs:
       with:
           repository: ${{ github.repository }}
           status: "completed"
+      env:
+        PARAGON_WORKFLOW_ID: ${{ secrets.PARAGON_WORKFLOW_ID }}
