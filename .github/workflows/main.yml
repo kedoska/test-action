@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to activate a workflow
+    steps:
+    - uses: kedoska/invoke-paragon-action
+      with:
+          repository: ${{ github.repository }}
+          status: "completed"
