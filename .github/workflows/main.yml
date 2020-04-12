@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to activate a workflow
     steps:
-    - uses: kedoska/invoke-paragon-action
+    - uses: kedoska/invoke-paragon-action@master
       with:
           repository: ${{ github.repository }}
           status: "completed"
