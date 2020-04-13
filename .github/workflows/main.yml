@@ -1,14 +1,14 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  hello_paragon:
     runs-on: ubuntu-latest
-    name: A job to activate a workflow
     steps:
     - name: Invoke Paragon Endpoint
       uses: kedoska/invoke-paragon-action@v1
       with:
-          repository: ${{ github.repository }}
-          status: "completed"
+          param1: "first param"
+          param2: "second static param"
+          param3: ${{ github.repository }}
       env:
         PARAGON_WORKFLOW_ID: ${{ secrets.PARAGON_WORKFLOW_ID }}
